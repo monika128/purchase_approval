@@ -21,7 +21,8 @@ class ResConfigSettings(models.TransientModel):
     def get_values(self):
         res = super(ResConfigSettings, self).get_values()
         purchase_order_approvers = self.env['ir.config_parameter'].sudo().get_param('purchase_approval.purchase_order_approvers')
-        res.update(
-            purchase_order_approvers=[(6, 0, literal_eval(purchase_order_approvers))],
-        )
+        if purchase_order_approvers:
+            res.update(
+                purchase_order_approvers=[(6, 0, literal_eval(purchase_order_approvers))],
+            )
         return res
