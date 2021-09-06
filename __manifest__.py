@@ -1,34 +1,25 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "purchase_approval",
+    'name': "Purchase Approval",
 
     'summary': """
-        purchase Order approval functionality""",
+        Extending Default approval for PO without manager Acceess""",
 
-    'description': """
-    Module for multiple approval
+    'description': """ Extended Purchase Approvals
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Monika",
+    'website': "www.linkedin.com/in/monika-phadtare-python-dev",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Purchases',
+    'version': '12.1',
 
-    # any module necessary for this one to work correctly
     'depends': ['base','purchase','account'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
-        'views/templates.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+        'views/purchase_res_config.xml',
     ],
 }
